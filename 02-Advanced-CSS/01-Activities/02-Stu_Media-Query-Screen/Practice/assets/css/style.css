@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  float: left;
+  width: 25%;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
+@media screen and (max-width: 992px) {
+  .card {
+    /* max-width: 25%; <-- this didn't work*/
+    width: 50%;
+    /* 50% percent because we want each card to take up half of the screen */
+  }
+}
+
+/* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+    .card {
+      width: 100%
+    }  
+}

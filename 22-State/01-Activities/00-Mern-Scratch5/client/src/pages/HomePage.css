@@ -1,0 +1,62 @@
+.parent{
+  position:relative;
+  width: 100%;
+  height: 25vw;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.backbox{
+  box-sizing: border-box;
+  width: 50%;
+  height: calc(25vw - 2px);/* subtracting the border*/
+  margin: 0;
+  padding: 0;
+  transition: all 1s linear;
+}
+
+.red.backbox{
+  background: rgba(255,0,0,0.5);
+}
+.blue.backbox{
+  background: rgba(0,0,255,0.5);
+}
+
+.hoverbox{
+  position: absolute;
+  box-sizing: border-box;
+  width: 15vw;
+  height: calc(25vw - 2px);/* subtracting the border*/
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: left 1s linear, right 1s linear;
+}
+
+.red.hoverbox{
+  background: rgba(255,0,0,1);
+  left: calc(50% - 100px);
+}
+
+.blue.hoverbox{
+  background: rgba(0,0,255,1);
+  right: calc(50% - 100px);
+}
+
+.red.backbox:hover{
+  background: rgba(255,0,0,1);
+}
+.red.backbox:hover .red.hoverbox{
+  opacity: 1;
+  left: 50%;
+}
+
+.blue.backbox:hover{
+  background: rgba(0,0,255,1);
+}
+
+.blue.backbox:hover .blue.hoverbox{
+  opacity: 1;
+  right: 50%;
+}

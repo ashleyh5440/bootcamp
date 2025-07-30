@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    // $( "#dialog" ).dialog();
+    // $( "#dialog" ).dialog("close"); // display: none
+    $( "#error-button" ).on( "click", function(event) {
+      console.log(event);
+      var city = event.target.dataset.city;
+      // $("#dialog").dialog( "open" );
+
+      // create
+      var dialogEl = $("<div>");
+      var pEl = $("<p>");
+      
+      // text / attr
+      dialogEl.attr({
+        id: "dialog",
+        title: "Error Box",
+        // style: "display: none", // close the box
+      });
+      pEl.text("I can't find what you are looking for in " + city);
+
+      // append
+      $(document.body).append(dialogEl);
+      dialogEl.append(pEl);
+
+      // jquery ui line to open dialog
+      $(dialogEl).dialog();
+
+    });
+  } );
+
+  </script>
+</head>
+<body>
+ 
+<!-- <div id="dialog" title="Error">
+  <p>I can't find what you are looking for</p>
+</div> -->
+<button id="error-button" data-city="Portland">
+  Error in Portland
+</button>
+ 
+</body>
+</html>

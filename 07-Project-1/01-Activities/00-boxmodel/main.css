@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: aquamarine;
+}
+
+.extra-large-float{
+  font-size: 5rem;
+  float:left;
+  font-weight: bolder;
+}
+
+article{
+  display: none;
+  border: black solid 2px;
+  margin: 10px; /* all around */
+  margin: 10px 5px; /* 10px top/bottom 5px right/left */
+  margin: 10px 5px 2px; /* 10px top 5px right/left 2px bottom */
+  margin: 10px 5px 2px 7px; /* 10px top 5px right 2px bottom 7px left */
+  padding: 0.5rem;
+}
+article > h1{ /* only selects h1's directly under an article */
+  margin: 0.75rem 0px 0.5rem;
+}
+
+.circle-box{
+  background: gray;
+  border: lightgray solid 3px;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  padding: 4.25rem 0px; 
+  text-align: center;
+  color: white;
+}
+
+/* relative position - will take up space - uses the same box for positiong elements */
+/* relative will use the default position to start position your element */
+.overlay-relative > .h6-container{
+  position: relative;
+  top: -4.25rem;
+  /* right: -5rem; */
+  left: 5rem;
+  font-size: 1rem;
+}
+
+.overlay-absolute {
+  border: 1px red solid;
+  margin: 2%;
+  position: relative;
+}
+
+/* absolute position - will not take up space - naturally overlay */
+/* absolute position will look for the nearest relative position element 
+in ancestors*/
+.overlay-absolute > .h6-container{
+  position: absolute; /* position: fixed will be referenced on browser window */
+  top: 6rem;
+  left: 5rem;
+  font-size: 1rem;
+}
+
+.particle-container{
+  position: relative;
+  height: 100px;
+  width: 100vw;
+  border: darkblue 1px solid;
+}
+
+.particle{
+  position: absolute;
+}
+.particle:nth-child(1){
+  right: 100px;
+  bottom: -10px;
+}
+
+.particle:nth-child(2){
+  top: calc(100px / 2 - 0.5rem); /* 1rem 100px */
+  left: calc(100vw / 2);
+}

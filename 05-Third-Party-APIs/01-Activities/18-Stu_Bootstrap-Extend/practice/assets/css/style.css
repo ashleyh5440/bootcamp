@@ -1,0 +1,17 @@
+:root {
+  --brown: #a88f82;
+  --tan: #f5e1d5;
+  --teal: #71a8a7;
+  --lightteal: #d5f5f5;
+  --light: #fffaf7;
+}
+
+.costum-navbar {
+  background-color: var(--teal);
+}
+/* Add your custom class style definitions here */
+/* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */
+
+.costum-navbar a:hover {
+  color: var(--light)
+}

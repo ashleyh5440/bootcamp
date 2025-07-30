@@ -1,0 +1,57 @@
+/* * All three list items in the navigation bar should display inline.
+* All three boxes should be visible. 
+* Each box should appear centered and on its own line. */
+
+header {
+  width: 100%;
+  background-color: lightblue;
+}
+
+h2 {
+  text-align: left;
+}
+
+ul {
+  text-align: right;
+  color: #ffffff;
+}
+
+/* List items in navigation bar */
+li {
+  /* TODO: Add your code here */ 
+  list-style-type: none;
+  font-size: 40px;
+}
+
+/* Boxes */
+img {
+  /* added display:block
+  Changed the margins to specify the distance to put the blocks in the center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+
+#item-1 {
+  background-color: #e0115f;
+  display: inline;
+}
+
+#item-2 {
+  background-color: #0000ff;
+  display: inline;
+}
+
+#item-3 {
+  background-color: #999900;
+  display: inline;
+}
+
+/* Since the code for the boxes above applies to all of them, commenting 
+this out nullify hiding box three and instead gives it the same properties as the others */
+/* Box 3 */
+/* #image-3 {
+  /* TODO: Add your code here */
+  display: none;
+} */ 

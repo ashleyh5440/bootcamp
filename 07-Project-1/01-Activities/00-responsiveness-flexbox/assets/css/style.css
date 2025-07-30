@@ -1,0 +1,60 @@
+
+body{
+  background: aquamarine;
+  min-height: 100vh;
+}
+
+.top-title{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#list-of-buttons{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+}
+
+#list-of-buttons, 
+#city-form{
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+#city-form{
+  display: flex;
+  flex-direction: row;
+}
+#city-form > input{
+  width: 80%;
+}
+
+.blue-box{
+  border: blue solid 3px;
+  margin: 5%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.blue-box img{
+  margin: 2.5%;
+}
+
+.animate__animated{
+  animation-duration: 4s !important;
+}
+
+@media screen and (min-width: 768px) {
+  .blue-box{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .blue-box img{
+    width: 45%;
+    height: auto;
+    max-width: 45%;
+  }
+}

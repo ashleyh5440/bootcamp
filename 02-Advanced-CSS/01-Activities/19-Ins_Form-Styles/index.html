@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Default Form Styles</title>
+  <style>
+    textarea {
+      resize: none;
+    }
+    input:required{
+      border: 5px solid red;
+    }
+    select:disabled{
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>Default Form Styles</h1>
+    <p>
+      Use the Chrome DevTools to inspect the elements. Try to force <code>:focus</code> state on some of them and look for CSS properties like <code>appearance</code>, <code>outline</code>, and <code>cursor</code>.
+    </p>
+    <p>
+      <label for="date-field">Date:</label>
+      <!-- This element has a CSS declaration of `cursor: text` -->
+      <input id="date-field" type="date" placeholder="" required />
+    </p>
+    <p>
+      <label  for="email">E-mail:</label>
+      <input id="email" type="text" placeholder="me@example.com" />
+    </p>
+    <p>
+      <label for="expertise">CSS level of expertise:</label>
+      <!-- This element has a CSS declaration of `appearance: menulist` -->
+      <select id="expertise" disabled>
+        <option value="3">Beginner</option>
+        <option value="4" selected>Intermediate</option>
+        <option value="5">Advanced</option>
+      </select>
+    </p>
+    <p>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" placeholder="Great article!" maxlength="8"></textarea>
+    </p>
+    <p>
+      <input class="checkbox" id="agreement" type="checkbox" />
+      <label for="agreement">I agree to share my e-mail address with The CSS Blog</label>
+    </p>
+    <p>
+      <!-- When this element is in a :focus state, the CSS `outline` property is applied -->
+      <button>Submit</button>
+    </p>
+  </form>
+</body>
+
+</html>
